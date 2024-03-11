@@ -44,6 +44,7 @@ class MainViewModel : ViewModel() {
         conversations.add(Triple("sent", textPrompt, images.toList()))
         conversations.add(Triple("received", "", null))
 
+
         val generativeModel = if (images.isNotEmpty()) geneminiProVisionModel else geneminiProModel
 
         val inputContent = content {
